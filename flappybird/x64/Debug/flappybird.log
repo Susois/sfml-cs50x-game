@@ -1,0 +1,8 @@
+﻿  flappybird.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.40.33721\include\xmemory(700,103): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.40.33721\include\xmemory(700,103): warning C4244:         with
+C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.40.33721\include\xmemory(700,103): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.40.33721\include\xmemory(700,103): warning C4244:             _Ty=int
+C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.40.33721\include\xmemory(700,103): warning C4244:         ]
+C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.40.33721\include\xmemory(700,103): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+  flappybird.vcxproj -> C:\Users\ADMIN\Desktop\proj\freestyle\x64\Debug\flappybird.exe
