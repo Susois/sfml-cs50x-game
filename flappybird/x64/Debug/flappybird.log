@@ -1,4 +1,9 @@
 ﻿  flappybird.cpp
+C:\Users\ADMIN\Desktop\proj\flappybird\flappybird.cpp(121,22): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
+C:\Users\ADMIN\Desktop\proj\flappybird\flappybird.cpp(121,22): warning C4244:         with
+C:\Users\ADMIN\Desktop\proj\flappybird\flappybird.cpp(121,22): warning C4244:         [
+C:\Users\ADMIN\Desktop\proj\flappybird\flappybird.cpp(121,22): warning C4244:             T=unsigned int
+C:\Users\ADMIN\Desktop\proj\flappybird\flappybird.cpp(121,22): warning C4244:         ]
 C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.40.33721\include\xmemory(700,103): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
 C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.40.33721\include\xmemory(700,103): warning C4244:         with
 C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.40.33721\include\xmemory(700,103): warning C4244:         [
