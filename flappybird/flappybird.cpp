@@ -21,6 +21,14 @@ const float PIPE_SPEED = 200.f;
 const float PIPE_SPAWN_INTERVAL = 1.5f;
 
 
+// enum
+enum gamestates {
+    menu, 
+    play,
+    ranking,
+    pause,
+    endscreen
+};
 
 
 //background
@@ -297,28 +305,75 @@ private:
     float timeSinceLastPipe;
     int score;
     sf::Font font;
+    sf::Font fontbutton;
     sf::Text scoreText;
     sf::Texture pipetexture;
     sf::Texture background_texture;
     sf::Texture ground_texture;
+    sf::Text startbutton;
+    sf::Text pausebutton;
+    sf::Text rankingbutton;
+    sf::Text menubuttontext;
+    sf::Text scoretextend;
     background back_ground;
     ground ground_;
+    gamestates game_state;
+
 public:
     Game()
-            : window(sf::VideoMode({ WINDOW_WIDTH, WINDOW_HEIGHT }), "Flappy Bird", sf::Style::Close),
-            back_ground("data/background.png"),
-            ground_("data/ground.png"),
-            bird("data/bird.png", 100, WINDOW_HEIGHT / 2),
-            timeSinceLastPipe(0),
-            score(0){
+        : window(sf::VideoMode({ WINDOW_WIDTH, WINDOW_HEIGHT }), "Flappy Bird", sf::Style::Close),
+        game_state(menu),
+        back_ground("data/background.png"),
+        ground_("data/ground.png"),
+        bird("data/bird.png", 100, WINDOW_HEIGHT / 2),
+        timeSinceLastPipe(0),
+        score(0) {
+
         window.setFramerateLimit(60);
-        pipetexture.loadFromFile("data/pipe.png");
+
+        fontbutton.loadFromFile("data/flappy.ttf");
         font.loadFromFile("data/font.ttf");
+        pipetexture.loadFromFile("data/pipe.png");
+
         scoreText.setFont(font);
         scoreText.setCharacterSize(32);
         scoreText.setFillColor(sf::Color::Red);
         scoreText.setPosition({ 10, 10 });
-        }
+
+        startbutton.setFont(fontbutton);
+        startbutton.setString("Start");
+        startbutton.setCharacterSize(32);
+        startbutton.setFillColor(sf::Color::Red);
+        startbutton.setPosition(WINDOW_WIDTH / 2 - 100, 150);
+
+        pausebutton.setFont(fontbutton);
+        pausebutton.setString("Pause (null)");
+        pausebutton.setCharacterSize(32);
+        pausebutton.setFillColor(sf::Color::Red);
+        pausebutton.setPosition(WINDOW_WIDTH / 2 - 100, 250);
+
+        rankingbutton.setFont(fontbutton);
+        rankingbutton.setString("Ranking (null)");
+        rankingbutton.setCharacterSize(32);
+        rankingbutton.setFillColor(sf::Color::Red);
+        rankingbutton.setPosition(WINDOW_WIDTH / 2 - 100, 350);
+
+        scoretextend.setFont(fontbutton);
+        scoretextend.setCharacterSize(72);
+        scoretextend.setString("Your Score: " + std::to_string(score));
+        scoretextend.setFillColor(sf::Color::Red);
+        sf::FloatRect textbounds = scoretextend.getGlobalBounds();
+        scoretextend.setPosition((WINDOW_WIDTH - textbounds.width) / 2, WINDOW_HEIGHT / 2 - 100);
+
+        // setup menu
+        menubuttontext.setFont(fontbutton);
+        menubuttontext.setCharacterSize(52);
+        menubuttontext.setString("Menu");
+        menubuttontext.setFillColor(sf::Color::Blue);
+        menubuttontext.setPosition((WINDOW_WIDTH - textbounds.width) / 2, WINDOW_HEIGHT / 2 );
+
+
+    }
 
     void run() {
         while (window.isOpen()) {
@@ -335,75 +390,112 @@ protected:
             if (event.type == sf::Event::Closed) {
                 window.close();
             }
-            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Space) {
-                bird.jump();
+            if (game_state == menu) {
+                if (event.type == sf::Event::MouseButtonPressed && event.mouseButton.button == sf::Mouse::Left)
+                {
+                    sf::Vector2f mousepos(event.mouseButton.x, event.mouseButton.y);
+                    if (startbutton.getGlobalBounds().contains(mousepos))
+                    {
+                        game_state = play;
+                    }
+                    else if (rankingbutton.getGlobalBounds().contains(mousepos)) {
+                        game_state = ranking;
+                    }
+                }
+            }
+            else if (game_state == play) {
+                if (event.type == sf::Event::KeyPressed && event.mouseButton.button == sf::Keyboard::Space)bird.jump();
+            }
+            else if (game_state == endscreen) {
+                sf::Vector2f mousepos(event.mouseButton.x, event.mouseButton.y);
+                if (menubuttontext.getGlobalBounds().contains(mousepos))
+                {
+                    game_state = menu;
+                }
             }
         }
     }
 
     void update() {
         float dt = clock.restart().asSeconds();
-        bird.update(dt);
-        back_ground.update(dt);
+        if (game_state == play)
+        {
+            bird.update(dt);
+            back_ground.update(dt);
 
-        // Update pipes
-        timeSinceLastPipe += dt;
-        if (timeSinceLastPipe > PIPE_SPAWN_INTERVAL) {
-            float gapY = getRandomFloat(150, WINDOW_HEIGHT-150);
-            //pipes.emplace_back(WINDOW_WIDTH, gapY, 200);
-            pipes.emplace_back(pipetexture, WINDOW_WIDTH, gapY, 200);
-            timeSinceLastPipe = 0;
-        }
+            // Update pipes
+            timeSinceLastPipe += dt;
+            if (timeSinceLastPipe > PIPE_SPAWN_INTERVAL) {
+                float gapY = getRandomFloat(150, WINDOW_HEIGHT - 150);
+                //pipes.emplace_back(WINDOW_WIDTH, gapY, 200);
+                pipes.emplace_back(pipetexture, WINDOW_WIDTH, gapY, 200);
+                timeSinceLastPipe = 0;
+            }
 
-        //if (back_ground.getbound().left + back_ground.getbound().width <= window.getSize().x) {
-        //    back_ground.resetposition(0, 0);
-        //}
+            //if (back_ground.getbound().left + back_ground.getbound().width <= window.getSize().x) {
+            //    back_ground.resetposition(0, 0);
+            //}
 
 
-        for (auto& pipe : pipes) {
-            pipe.update(dt);
-        }
+            for (auto& pipe : pipes) {
+                pipe.update(dt);
+            }
 
-        // Remove off-screen pipes
-        pipes.erase(
-            std::remove_if(pipes.begin(), pipes.end(), [](const PipePair& pipe) {
-                return pipe.isOffScreen();
-                }),
-            pipes.end());
+            // Remove off-screen pipes
+            pipes.erase(
+                std::remove_if(pipes.begin(), pipes.end(), [](const PipePair& pipe) {
+                    return pipe.isOffScreen();
+                    }),
+                pipes.end());
 
-        // Check collisions
-        // vòng for cho dành cho tất cả pipe đang chạy
-        for (auto& pipe : pipes) {
-            if (pipe.collidesWith(bird)) { // kiểm tra va chạm giữa bird và pipe, trả về true nếu có va chạm
+            // Check collisions
+            // vòng for cho dành cho tất cả pipe đang chạy
+            for (auto& pipe : pipes) {
+                if (pipe.collidesWith(bird)) { // kiểm tra va chạm giữa bird và pipe, trả về true nếu có va chạm
+                    resetGame();
+                    //game_state = menu;
+
+                    return;
+                }
+
+                if (!pipe.isScored() && bird.getBounds().left > pipe.getX()) {
+                    pipe.setScored(true);
+                    score++;
+                }
+            }
+
+            // check nếu bird ở ngoài màn hìnưind
+            if (bird.getBounds().top < 0 || bird.getBounds().top + bird.getBounds().height >= window.getSize().y) {
                 resetGame();
                 return;
             }
-
-            if (!pipe.isScored() && bird.getBounds().left > pipe.getX()) {
-                pipe.setScored(true);
-                score++;
-            }
+            // Update score text
+            scoreText.setString("Score: " + std::to_string(score));
         }
-
-        // check nếu bird ở ngoài màn hìnưind
-        if (bird.getBounds().top < 0 || bird.getBounds().top + bird.getBounds().height >= window.getSize().y) {
-            resetGame();
-            return;
-        }
-        // Update score text
-        scoreText.setString("Score: " + std::to_string(score));
     }
 
     void render() {
         window.clear();
-        back_ground.render(window);
-        ground_.render(window);
-        bird.render(window);
-        for (auto& pipe : pipes) {
-            pipe.render(window);
+        if (game_state == menu) {
+            back_ground.render(window);
+            ground_.render(window);
+            window.draw(startbutton);
+            window.draw(pausebutton);
+            window.draw(rankingbutton);
         }
-        window.draw(scoreText);
-
+        else if (game_state == play) {
+            back_ground.render(window);
+            ground_.render(window);
+            bird.render(window);
+            for (auto& pipe : pipes)pipe.render(window);
+            window.draw(scoreText);
+        }
+        else if (game_state == endscreen) {
+            back_ground.render(window);
+            ground_.render(window);
+            window.draw(scoretextend);
+            window.draw(menubuttontext);
+        }
         window.display();
     }
 
@@ -413,6 +505,7 @@ protected:
         ground_.resetpositon();
         pipes.clear();
         score = 0;
+        game_state = endscreen;
     }
 };
 
