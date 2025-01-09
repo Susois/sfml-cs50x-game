@@ -295,7 +295,7 @@ public:
     }
 };
 
-// Main Game class
+
 class Game {
 private:
     sf::RenderWindow window;

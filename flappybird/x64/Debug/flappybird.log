@@ -1,4 +1,5 @@
-﻿  flappybird.cpp
+﻿C:\Program Files\Microsoft Visual Studio\2022\Preview\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (flappybird.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  flappybird.cpp
 C:\Users\ADMIN\Desktop\proj\flappybird\flappybird.cpp(129,22): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
 C:\Users\ADMIN\Desktop\proj\flappybird\flappybird.cpp(129,22): warning C4244:         with
 C:\Users\ADMIN\Desktop\proj\flappybird\flappybird.cpp(129,22): warning C4244:         [
@@ -30,4 +31,4 @@ C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.40.33721\
 C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.40.33721\include\xmemory(700,103): warning C4244:             _Ty=int
 C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.40.33721\include\xmemory(700,103): warning C4244:         ]
 C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.40.33721\include\xmemory(700,103): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
-  flappybird.vcxproj -> C:\Users\ADMIN\Desktop\proj\freestyle\x64\Debug\flappybird.exe
+  flappybird.vcxproj -> C:\Users\ADMIN\Desktop\proj\freestyle\x64\Debug\2.flappybird.exe
