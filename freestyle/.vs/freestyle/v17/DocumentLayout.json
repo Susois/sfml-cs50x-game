@@ -3,10 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\ADMIN\\Desktop\\proj\\freestyle\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D8B40E52-EAE8-41C1-A885-6C25B20B2353}|..\\flappybird\\flappybird.vcxproj|C:\\Users\\ADMIN\\Desktop\\proj\\flappybird\\flappybird.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{8443A6C4-9461-4E6B-AEC5-3C9701B99100}|..\\breakout\\breakout.vcxproj|C:\\Users\\ADMIN\\Desktop\\proj\\breakout\\breakout.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8443A6C4-9461-4E6B-AEC5-3C9701B99100}|..\\breakout\\breakout.vcxproj|C:\\Users\\ADMIN\\Desktop\\proj\\breakout\\breakout.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D8B40E52-EAE8-41C1-A885-6C25B20B2353}|..\\flappybird\\flappybird.vcxproj|C:\\Users\\ADMIN\\Desktop\\proj\\flappybird\\flappybird.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{47F413AF-43ED-4D5B-8201-2DE35F756510}|..\\pong\\pong.vcxproj|C:\\Users\\ADMIN\\Desktop\\proj\\pong\\pong.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,13 +30,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "breakout.cpp",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\proj\\breakout\\breakout.cpp",
               "RelativeDocumentMoniker": "..\\breakout\\breakout.cpp",
               "ToolTip": "C:\\Users\\ADMIN\\Desktop\\proj\\breakout\\breakout.cpp",
               "RelativeToolTip": "..\\breakout\\breakout.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAYwE4AAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-09T05:04:10.177Z",
               "EditorCaption": ""
@@ -51,8 +51,7 @@
               "RelativeToolTip": "..\\ex\\ex.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-09T03:40:53.333Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T03:40:53.333Z"
             },
             {
               "$type": "Document",
@@ -64,20 +63,25 @@
               "RelativeToolTip": "..\\pong\\pong.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAswBQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-09T03:38:20.561Z",
-              "EditorCaption": ""
-            },
+              "WhenOpened": "2025-01-09T03:38:20.561Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "flappybird.cpp",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\proj\\flappybird\\flappybird.cpp",
               "RelativeDocumentMoniker": "..\\flappybird\\flappybird.cpp",
               "ToolTip": "C:\\Users\\ADMIN\\Desktop\\proj\\flappybird\\flappybird.cpp",
               "RelativeToolTip": "..\\flappybird\\flappybird.cpp",
-              "ViewState": "AQIAAKgAAAAAAAAAAAAAAAUCAAAAAAAA",
+              "ViewState": "AQIAANQAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-07T09:38:03.881Z",
+              "WhenOpened": "2025-01-09T06:12:38.245Z",
               "EditorCaption": ""
             }
           ]

@@ -1,0 +1,3 @@
+﻿  freestyle.cpp
+C:\SFML-3.0.0-windows-vc17-64-bit\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+  freestyle.vcxproj -> C:\Users\ADMIN\Desktop\proj\freestyle\x64\Debug\0.freestyle.exe

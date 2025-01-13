@@ -1,2 +1,37 @@
 ﻿  breakout.cpp
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(136,66): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(136,66): warning C4244:         with
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(136,66): warning C4244:         [
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(136,66): warning C4244:             T=float
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(136,66): warning C4244:         ]
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(136,45): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(136,45): warning C4244:         with
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(136,45): warning C4244:         [
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(136,45): warning C4244:             T=float
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(136,45): warning C4244:         ]
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(151,65): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(151,65): warning C4244:         with
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(151,65): warning C4244:         [
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(151,65): warning C4244:             T=float
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(151,65): warning C4244:         ]
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(151,44): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(151,44): warning C4244:         with
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(151,44): warning C4244:         [
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(151,44): warning C4244:             T=float
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(151,44): warning C4244:         ]
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(162,43): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(162,43): warning C4244:         with
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(162,43): warning C4244:         [
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(162,43): warning C4244:             T=unsigned int
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(162,43): warning C4244:         ]
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(163,60): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(163,60): warning C4244:         with
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(163,60): warning C4244:         [
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(163,60): warning C4244:             T=unsigned int
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(163,60): warning C4244:         ]
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(163,40): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(163,40): warning C4244:         with
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(163,40): warning C4244:         [
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(163,40): warning C4244:             T=unsigned int
+C:\Users\ADMIN\Desktop\proj\breakout\breakout.cpp(163,40): warning C4244:         ]
   breakout.vcxproj -> C:\Users\ADMIN\Desktop\proj\freestyle\x64\Debug\3.breakout.exe
